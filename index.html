@@ -10,7 +10,10 @@
         var letsGoFace = document.getElementById("lets-go-face");
         lockedStatus.innerText = "IN";
         letsGoFace.style = "display: block;";
-        element.disabled = true;
+        if(!element.checked) {
+          element.checked = true
+          alert("Error: Cannot Lock Back Out")
+        }
       }
     </script>
     <style>
